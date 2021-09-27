@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+# AJUDE UM VOLUNTÁRIO
 
-`CURSO`
+`TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`PROJETO: DESENVOLVIMENTO DE APLICAÇÃO WEB FRONT-END`
 
-`SEMESTRE`
+`2°/2021`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolvimento de uma página online que faça a conexão entre pessoas dispostas a atuar em prol de causas sociais através do trabalho voluntário e entidades assistenciais que necessitem de pessoas qualificadas para ocupar suas funções.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* André Vieira Grochowski
+* Daniel Begas Da Silva
+* Erik Lopes Vitelli
+* Meriane Dos Reis Dias
+* Thiago Carvalho Ferreira
 
 ## Orientador
 
-* Nome completo do professor 1
+* Sandra Maria Silveira
 
 ## Instruções de utilização
 
