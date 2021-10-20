@@ -129,7 +129,7 @@ nav {
 }
 
 
-@media screen and (max-width:720px){ /*breakpoint cards*/
+@media screen and (max-width:930px){ /*breakpoint cards*/
     main{
         height: 200vh; /* Altura que o conteúdo precisa ocupar para que a nav não o interrompa*/
     }
