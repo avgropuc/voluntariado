@@ -1,18 +1,18 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Passa a considerar toda a caixa como conteúdo (widht= conteúdo + border + padding)*/
     font-family: "Poppins", sans-serif;
 }
 
 main{
     
-    height: 70vh;
+    height: 70vh; /*Viewport height*/
     width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* flex container*/
+    justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
+    align-items: center; /*fazer após row: Alinha vertical (para baixo)  */
 
     color: #434343;
     
@@ -20,36 +20,32 @@ main{
 
 main.cards{
     display: flex;
-    flex-direction: row;
-    padding: 32px;
+    flex-direction: row; /*em linha - agora volta para o align-items*/
+    padding: 32px; /* todos os cards em relação a página*/
 
 }
 
 main.cards section.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex; /*alinhamento dos itens*/
+    flex-direction: column; /*alinhados em coluna*/
+    align-items: center; /*centralizados no card*/
+    text-align: center; 
     background: whitesmoke;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem; /* medida responsiva (tutorial)*/
     border-radius: 8px;
     max-height: 400px;
-    margin-left: 32px;
+    margin-left: 32px; /*espaçar em relação aos outros cards*/
     box-shadow: 20px 20px 50px -3px rgba(255, 166, 0, 0.774);
 }
 
 main.cards section.card:first-child{
-    margin-left: 0;
+    margin-left: 0; /*retirar espaçamento, primeiro item não precisa se espaçar*/
 }
 
-main.cards section.card h3 {
-    font-size: 100%;
-    margin:16px 0;
-}
 
 main.cards section.card span{
     font-weight: 500;
-    max-width: 240px;
+    max-width: 240px; /*quebra da largura do texto*/
     font-size: 85%;
 }
 
@@ -62,7 +58,7 @@ main.cards section.card button {
     font-size: 70%;
     font-weight: 500;
     color: white;
-    background: linear-gradient(to right,rgba(255, 166, 0, 0.774),rgba(255, 166, 0, 0.774));
+    background-color:rgba(255, 166, 0, 0.774) ; 
 }
 
 
@@ -86,14 +82,11 @@ img{
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    display: flex; /* logo e lista ao lado*/
+    justify-content: space-around; /* espaço ao redor metade do espaço entre eles*/
+    align-items: center; /*verticalmente ao centro*/
     background-color: rgba(255, 166, 0, 0.774);
-    height: 20vh;
-    
-    
+    height: 20vh; 
 }
 
 .nav-list {
@@ -103,7 +96,7 @@ nav {
 
 .nav-list li {
     letter-spacing: 3px;
-    margin-left: 32px;
+    margin-left: 32px; /* afastar itens*/
 }
 
 
@@ -112,7 +105,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background-color: rgba(255, 166, 0, 0.774);
     height: 15vh;
 
@@ -120,42 +112,41 @@ nav {
 
 @media (max-width: 999px){
     .nav-list {
-        position: absolute;
-        top: 20vh;
-        right: 0;
+        position: absolute; /*posicionamento não é fixo mais*/
+        top: 20vh; /* logo abaixo da barra de menu*/
         width: 100vw;
         height: 15vh;
         background: rgba(255, 166, 0, 0.774); 
         flex-direction:column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-around; /* espalha pelo espaço disponível*/
     }
 
     .nav-list li {
-        margin-left: 0;
+        margin-left: 0; 
         opacity: 50;
     }
 }
 
 
-@media screen and (max-width:720px){
+@media screen and (max-width:720px){ /*breakpoint cards*/
     main{
-        height: 200vh;
+        height: 200vh; /* Altura que o conteúdo precisa ocupar para que a nav não o interrompa*/
     }
     main.cards{
-        flex-direction: column;
+        flex-direction: column; /*um embaixo do outro*/
     }
 
     main.cards section.card{
-        margin-left: 0px;
-        margin-bottom: 32px;
+        margin-left: 0px; /*justificar o alinhamento*/
+        margin-bottom: 32px; /*espaçamento entre eles*/
     }
 
 main.cards section.card:last-child{
-    margin-bottom: 0;
+    margin-bottom: 0; /*Do mesmo jeito que tirou margin left do primeiro, espaço desnecessário*/
 }
 main.cards section.card button{
-    font-size: 70%;
+    font-size: 70%; /* Altera tamanho botão*/
 }
 }
 
