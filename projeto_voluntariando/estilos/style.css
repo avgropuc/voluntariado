@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /*Passa a considerar toda a caixa como conteúdo (widht= conteúdo + border + padding)*/
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -40,26 +40,26 @@ main.cards section.card:first-child {
 }
 
 main.cards section.card h3 {
-    font-size: 100%;
-    margin:16px 0;
+  font-size: 100%;
+  margin: 16px 0;
 }
 
-main.cards section.card span{
-    font-weight: 500;
-    max-width: 240px; /*quebra da largura do texto*/
-    font-size: 85%;
+main.cards section.card span {
+  font-weight: 500;
+  max-width: 240px; /*quebra da largura do texto*/
+  font-size: 85%;
 }
 
 main.cards section.card button {
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 32px;
-    border: 0;
-    cursor: pointer;
-    font-size: 70%;
-    font-weight: 500;
-    color: white;
-    background-color:rgba(255, 166, 0, 0.774) ; 
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 70%;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(255, 166, 0, 0.774);
 }
 
 a {
@@ -72,19 +72,22 @@ a:hover {
   opacity: 0.7;
 }
 
+#headerEmbed {
+  width: 100%;
+  height: 20vh;
+}
+
 img {
   height: 20vh;
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background-color: rgba(255, 166, 0, 0.774);
-    height: 20vh;
-    
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 166, 0, 0.774);
+  height: 20vh;
 }
 
 .nav-list {
@@ -94,37 +97,36 @@ nav {
 }
 
 .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+  letter-spacing: 3px;
+  margin-left: 32px;
 }
 
 #rodape {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background-color: rgba(255, 166, 0, 0.774);
-    height: 15vh;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 166, 0, 0.774);
+  height: 15vh;
 }
 
-@media (max-width: 999px){
-    .nav-list {
-        position: absolute;
-        top: 20vh;
-        right: 0;
-        width: 100vw;
-        height: 15vh;
-        background: rgba(255, 166, 0, 0.774); 
-        flex-direction:column;
-        align-items: center;
-        justify-content: space-around;
-    }
+@media (max-width: 999px) {
+  .nav-list {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    width: 100vw;
+    height: 15vh;
+    background: rgba(255, 166, 0, 0.774);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 50;
-    }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 50;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -135,24 +137,25 @@ nav {
   main.cards {
     flex-direction: column; /*um embaixo do outro*/
   }
+}
 
-@media screen and (max-width:720px){
-    main{
-        height: 200vh;
-    }
-    main.cards{
-        flex-direction: column;
-    }
+@media screen and (max-width: 720px) {
+  main {
+    height: 200vh;
+  }
+  main.cards {
+    flex-direction: column;
+  }
 
-    main.cards section.card{
-        margin-left: 0px;
-        margin-bottom: 32px;
-    }
+  main.cards section.card {
+    margin-left: 0px;
+    margin-bottom: 32px;
+  }
 
-main.cards section.card:last-child{
+  main.cards section.card:last-child {
     margin-bottom: 0;
-}
-main.cards section.card button{
+  }
+  main.cards section.card button {
     font-size: 70%;
-}
+  }
 }
