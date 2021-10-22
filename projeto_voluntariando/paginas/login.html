@@ -18,6 +18,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href= "../estilos/login.css" />
+    <link rel="stylesheet" href= "../assets/dados.json" />
+    <script src="../scripts/login.js"></script>
   </head>
   <body>
     <header>
@@ -52,7 +54,7 @@
             placeholder="Digite sua Senha"
           />
           <a href="#" id="esqueceu-senha">Esqueceu a Senha?</a>
-          <input type="submit" value="Login" />
+          <input type="button" value="Login" onclick="login()"/>
         </form>
         <!--<div id="rede-social">
           <p>Entre pelas suas redes sociais</p>
@@ -61,8 +63,7 @@
           <i class="fa fa-google"></i>
         </div>-->
         <div id="registro-usuario">
-          <p>Faça seu registro</p>
-          <a href="#">Registrar</a>
+          <a href="#">Faça seu registro</a>
         </div>
       </div>
       <div></div>

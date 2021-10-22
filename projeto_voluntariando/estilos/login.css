@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   border: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 textarea:focus,
@@ -68,7 +68,7 @@ input:focus {
   margin-top: 5px;
 }
 
-input[type="submit"] {
+input[type='button'] {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -81,7 +81,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type='button']:hover {
   background-color: #1b223c;
   transition: 0.4s;
 }
