@@ -17,54 +17,35 @@ A tela de login do sistema apresenta, além da parte de navegação, uma área d
 
 ### **Artefatos da funcionalidade**
 
- - <a href="projeto_voluntariando\paginas\login.html"> login.html
- - <a href="projeto_voluntariando\estilos\login.css"> login.css
- - <a href="projeto_voluntariando\scripts\login.js"> login.js
- - <a href="projeto_voluntariando\assets\dados.json"> dados.json
+ - <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/blob/2c24e920ecefd55004ae3fd1192795310b1ff867/projeto_voluntariando/paginas/login.html"> login.html</a>
+ - <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/blob/2c24e920ecefd55004ae3fd1192795310b1ff867/projeto_voluntariando/estilos/login.css"> login.css</a>
+ - <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/blob/2c24e920ecefd55004ae3fd1192795310b1ff867/projeto_voluntariando/scripts/login.js"> login.js</a>
+ - <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/blob/2c24e920ecefd55004ae3fd1192795310b1ff867/projeto_voluntariando/assets/dados.json"> dados.json</a>
  
 ### **Estrutura de dados**
 
 ````
-     function login() {
-    //pegas os valores inseridos nos campos
-    var email = document.getElementById("email-usuario").value;
-    var senha = document.getElementById("senha-usuario").value;
-
-    var requestURL = "../assets/dados.json";
-
-    //faz uma requisicao ao servidor atrás do arquivo
-    var requisicao = new XMLHttpRequest();
-    requisicao.open("GET", requestURL);
-    requisicao.responseType = "json";
-    requisicao.send();
-
-    requisicao.onload = () =>{
-        var resposta = requisicao.response;
-        var usuarios = resposta["usuarios"];
-
-        var userLogado = false;
-
-        for (let i = 0; i < usuarios.length; i++) {
-            var user = usuarios[i];
-
-            if (user.email == email && user.senha == senha) {
-                userLogado = true;
-                break;
-            }
-        }
-        
-        if(userLogado)
-        alert("bem vindo " + user.nome);
-        else
-        alert("Usuário e senha incorretos");
-        return user.nome;
-    }
-  }
+     {
+    "usuarios": [
+      {
+        "nome": "erik",
+        "email": "erik@email.com",
+        "senha": "123456"
+      },
+      {
+        "nome": "meriane",
+        "email": "meriane@email.com",
+        "senha": "123456"
+      }
+    ]
+}
 ````
 ### **Instruções de acesso**
 
- 1. Abra um navegador de internet e informe a seguinte URL: XXX
- 2. A tela de login será a funcionalidade exibida pela página.
+ 1. Faça download do arquivo do projeto (ZIP) ou <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/tree/2c24e920ecefd55004ae3fd1192795310b1ff867">clone</a> do projeto no GITHub;
+ 2. Descompacte o arquivo em uma pasta específica;
+ 3. Abra o Visual Studio Code e execute o Live Server;
+ 4. Abra um navegador de Internet e informe a seguinte URL <a href="http://localhost:5500/index.html"></a>
 
 > **Links Úteis**:
 >
