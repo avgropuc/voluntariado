@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../imagens/favicon.ico"
+      type="image/x-icon"
+    />
     <title>VOLUNTARIANDO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,8 +21,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href= "../estilos/login.css" />
-    <link rel="stylesheet" href= "../assets/dados.json" />
+    <link rel="stylesheet" href="../estilos/login.css" />
+    <link rel="stylesheet" href="../assets/dados.json" />
+    <script src="https://use.fontawesome.com/2c09ff5edd.js"></script>
     <script src="../scripts/login.js"></script>
   </head>
   <body>
@@ -27,8 +32,16 @@
         <a href="../index.html"><img src="../imagens/logo.png" alt="logo" /></a>
 
         <ul class="nav-list">
-          <li><a href="../paginas/queroservoluntario.html">Quero ser voluntário</a></li>
-          <li><a href="../paginas/buscoporvoluntarios.html">Busco por voluntários</a></li>
+          <li>
+            <a href="../paginas/queroservoluntario.html"
+              >Quero ser voluntário</a
+            >
+          </li>
+          <li>
+            <a href="../paginas/buscoporvoluntarios.html"
+              >Busco por voluntários</a
+            >
+          </li>
           <li><a href="../paginas/login.html">Entrar</a></li>
         </ul>
       </nav>
@@ -45,16 +58,19 @@
             id="email-usuario"
             placeholder="Digite seu e-mail"
             autocomplete="off"
+            required
           />
           <label for="password">Senha</label>
           <input
             type="password"
             name="senha-usuario"
             id="senha-usuario"
-            placeholder="Digite sua Senha"
+            placeholder="Digite sua senha"
+            required
           />
-          <a href="#" id="esqueceu-senha">Esqueceu a Senha?</a>
-          <input type="button" value="Login" onclick="login()"/>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+          <!--<a href="#" id="esqueceu-senha">Esqueceu a Senha?</a>-->
+          <input type="button" value="Login" onclick="login()" />
         </form>
         <!--<div id="rede-social">
           <p>Entre pelas suas redes sociais</p>
@@ -62,12 +78,9 @@
           <i class="fa fa-linkedin"></i>
           <i class="fa fa-google"></i>
         </div>-->
-        <div id="registro-usuario">
-          <a href="#">Faça seu registro</a>
-        </div>
       </div>
-      <div></div>
-      <div></div>
+      <script src="../scripts/verSenha.js"></script>
+      <script src="../scripts/login.js"></script>
     </main>
 
     <footer id="rodape">&copy 2021 Voluntariando</footer>

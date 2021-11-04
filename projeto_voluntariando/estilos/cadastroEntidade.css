@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Passa a considerar toda a caixa como conteúdo (widht= conteúdo + border + padding)*/
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  background-color: rgba(255, 166, 0, 0.774);
+  box-shadow: 3px 3px 1px 0px #00000060;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 20%;
+  height: auto;
+  width: 60%;
+  padding: 20px;
+  justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
+  align-items: center; /*fazer após row: Alinha vertical (para baixo)  */
+  color: #434343;
+}
+
+#inst,
+#cont,
+#log,
+#campo2 {
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#campo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 35px;
+  width: 50%;
+  padding: 20px;
+  color: white;
+  text-align: justify;
+  border: 0px solid black;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#campo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 35px;
+  width: 50%;
+  padding: 20px;
+  color: white;
+  text-align: justify;
+  border-radius: 5px;
+  text-align: left;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.botao {
+  display: block;
+  align-items: center;
+  background-color: transparent;
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 16pt;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  margin-top: auto;
+}
+
+botao:hover {
+  background-color: #f1f1f1;
+  color: orange;
+  transition: all 0.4s ease-out;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+#headerEmbed {
+  width: 100%;
+  height: 20vh;
+}
+
+img {
+  height: 20vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 166, 0, 0.774);
+  height: 20vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: right;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+#rodape {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: rgba(255, 166, 0, 0.774);
+  height: 15vh;
+}
+
+@media (max-width: 999px) {
+  .nav-list {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    width: 100vw;
+    height: 15vh;
+    background: rgba(255, 166, 0, 0.774);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    padding: 10px;
+    display: flex;
+    margin-left: 0;
+    margin-top: 125px;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #campo1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #campo2 {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .botao {
+    width: auto;
+    display: flex;
+    margin-top: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 50;
+  }
+  @media screen and (max-width: 930px) {
+    /*breakpoint cards*/
+    main {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    main {
+      height: auto;
+      width: auto;
+    }
+  }
+}

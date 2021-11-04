@@ -1,0 +1,69 @@
+main {
+  flex-direction: column;
+  padding: 16px;
+  justify-content: flex-start;
+  height: 80vh;
+}
+
+#filtro_voluntarios {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.select_personalizado {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.select_personalizado select {
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+#cards_resultados {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow-y: auto;
+}
+
+.card_resultado {
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 0 5px 15px #ccc;
+  margin: 10px 15px;
+  padding: 16px;
+}
+
+.card_resultado img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card_resultado li {
+  margin-top: 5px;
+}

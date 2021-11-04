@@ -5,12 +5,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
 main {
   height: 70vh; /*Viewport height*/
   width: 100%;
 
   display: flex; /* flex container*/
-  justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
+  justify-content: right; /* alinhados em única coluna,no centro (para direita)*/
   align-items: center; /*fazer após row: Alinha vertical (para baixo)  */
 
   color: #434343;
@@ -22,10 +27,23 @@ main.cards {
   padding: 30px; /* todos os cards em relação a página*/
 }
 
+main.cards section.meu-perfil {
+  display: flex; /*alinhamento dos itens*/
+  flex-direction: column; /*alinhados em coluna*/
+  align-items: left; /*esquerda no card*/
+  text-align: left; /*alinhamento do texto a esquerda*/
+  background: whitesmoke;
+  padding: 1rem 1.5rem; /* medida responsiva (tutorial)*/
+  border-radius: 8px;
+  max-height: 700px;
+  margin-left: 70px; /*espaçar em relação aos outros cards*/
+  box-shadow: 20px 20px 50px -3px rgba(255, 166, 0, 0.774);
+}
+
 main.cards section.card {
   display: flex; /*alinhamento dos itens*/
   flex-direction: column; /*alinhados em coluna*/
-  align-items: center; /*centralizados no card*/
+  align-items: right; /*direita no card*/
   text-align: center;
   background: whitesmoke;
   padding: 1rem 1.5rem; /* medida responsiva (tutorial)*/
@@ -87,7 +105,7 @@ nav {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background-color: rgba(255, 166, 0, 0.774);
-  height: 20vh;
+  height: 19vh;
 }
 
 .nav-list {
@@ -132,25 +150,16 @@ nav {
 @media screen and (max-width: 930px) {
   /*breakpoint cards*/
   main {
-    height: 100vh; /* Altura que o conteúdo precisa ocupar para que a nav não o interrompa*/
+    height: 200vh; /* Altura que o conteúdo precisa ocupar para que a nav não o interrompa*/
   }
   main.cards {
     flex-direction: column; /*um embaixo do outro*/
   }
 }
 
-@media screen and (max-width: 915px) {
-  /*breakpoint cards*/
-  main {
-    height: 100vh; /* Altura que o conteúdo precisa ocupar para que a nav não o interrompa*/
-  }
-  main.cards {
-    flex-direction: column; /*um embaixo do outro*/
-  }
-}
 @media screen and (max-width: 720px) {
   main {
-    height: 100vh;
+    height: 200vh;
   }
   main.cards {
     flex-direction: column;
