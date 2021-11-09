@@ -6,14 +6,71 @@
 }
 
 main {
-  height: 150vh; /*Viewport height*/
-  width: 100%;
-
-  display: flex; /* flex container*/
+  display: flex;
+  background-color: rgba(255, 166, 0, 0.774);
+  box-shadow: 3px 3px 1px 0px #00000060;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 20%;
+  height: auto;
+  width: 65%;
+  padding: 20px;
   justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
   align-items: center; /*fazer após row: Alinha vertical (para baixo)  */
-
   color: #434343;
+}
+
+#dados,
+#campo2 {
+  
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#campo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 35px;
+  width: 80%;
+  padding: 20px;
+  color: #434343;
+  text-align: justify;
+  border: 0px solid white;
+  border-radius: 5px;
+  text-align: left;
+  
+  
+}
+
+#campo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 35px;
+  width: 70%;
+  padding: 20px;
+  color: #434343;
+  text-align: justify;
+  border-radius: 5px;
+  text-align: left;
+  margin-right: 5px;
+  
+}
+
+label{
+  font-size:0.95em;
+}
+
+input,select{
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  outline: none;
+  
+
 }
 
 a {
@@ -22,14 +79,37 @@ a {
   transition: 0.3s;
 }
 
+
+input[type="submit"] {
+  display: block;
+  align-items: center;
+  margin-top: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  height: 30px;
+  width: 200px;
+  border-radius: 20px;
+  color: white;
+  background-color: #08558b;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1b223c;
+  transition: 0.4s;
+}
+
+
+
 a:hover {
   opacity: 0.7;
 }
 
-/*#headerEmbed {
-    width: 100%;
-    height: 20vh;
-  }*/
+#headerEmbed {
+  width: 100%;
+  height: 20vh;
+}
 
 img {
   height: 20vh;
@@ -55,77 +135,6 @@ nav {
   margin-left: 32px;
 }
 
-#titulo {
-  font-size: 1.5em;
-}
-
-fieldset {
-  border: 0;
-}
-
-form {
-  background-color: rgba(255, 166, 0, 0.8);
-  border-radius: 2%;
-  padding: 2%;
-}
-
-p {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-label {
-  color: black;
-}
-
-.labelInput {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  transition: 0.5px;
-}
-
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput {
-  top: -20px;
-  font-size: 12px;
-  color: #f1f1f1;
-}
-
-.inputBox {
-  position: relative;
-}
-
-.inputUser {
-  background: none;
-  border: none;
-  border-bottom: 1px solid #f1f1f1;
-  outline: none;
-  font-size: 15px;
-  width: 100%;
-  letter-spacing: 2px;
-}
-
-input[type="submit"] {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none;
-  height: 50px;
-  width: 90px;
-  border-radius: 20px;
-  color: white;
-  background-color: #08558b;
-  margin-top: 40px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #1b223c;
-  transition: 0.4s;
-}
-
 #rodape {
   display: flex;
   justify-content: space-around;
@@ -145,28 +154,53 @@ input[type="submit"]:hover {
     background: rgba(255, 166, 0, 0.774);
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  main {
+    padding: 10px;
+    display: flex;
+    margin-left: 0;
+    margin-top: 125px;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #campo1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #campo2 {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .botao {
+    width: auto;
+    display: flex;
+    margin-top: 0;
   }
 
   .nav-list li {
     margin-left: 0;
     opacity: 50;
   }
-}
-
-@media screen and (max-width: 999px) {
-  main {
-    height: 200vh;
-  }
-  main.formulario {
-    flex-direction: column;
-  }
-}
-
-/* @media screen and (min-height: 622px) {
+  @media screen and (max-width: 930px) {
+    /*breakpoint cards*/
     main {
-      
+      height: auto;
+      width: auto;
     }
-    
   }
-  */
+
+  @media screen and (max-width: 720px) {
+    main {
+      height: auto;
+      width: auto;
+    }
+  }
+}
