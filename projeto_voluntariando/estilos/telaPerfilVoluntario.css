@@ -7,7 +7,9 @@
 
 h1 {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  margin-top: 15px;
+  margin-left: 570px;
 }
 
 main {
@@ -27,17 +29,13 @@ main.cards {
   padding: 30px; /* todos os cards em relação a página*/
 }
 
-main.cards section.meu-perfil {
-  display: flex; /*alinhamento dos itens*/
-  flex-direction: column; /*alinhados em coluna*/
-  align-items: left; /*esquerda no card*/
-  text-align: left; /*alinhamento do texto a esquerda*/
-  background: whitesmoke;
-  padding: 1rem 1.5rem; /* medida responsiva (tutorial)*/
-  border-radius: 8px;
-  max-height: 700px;
-  margin-left: 70px; /*espaçar em relação aos outros cards*/
+.meu-perfil {
+  height: 50vh;
+  width: 38%;
   box-shadow: 20px 20px 50px -3px rgba(255, 166, 0, 0.774);
+  text-align: center;
+  background: whitesmoke;
+  margin: 20px 870px 2px 5px;
 }
 
 main.cards section.card {
@@ -49,6 +47,7 @@ main.cards section.card {
   padding: 1rem 1.5rem; /* medida responsiva (tutorial)*/
   border-radius: 8px;
   max-height: 400px;
+  margin-top: -800px;
   margin-left: 32px; /*espaçar em relação aos outros cards*/
   box-shadow: 20px 20px 50px -3px rgba(255, 166, 0, 0.774);
 }
@@ -125,7 +124,7 @@ nav {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background-color: rgba(255, 166, 0, 0.774);
-  height: 15vh;
+  height: 20vh;
 }
 
 @media (max-width: 999px) {

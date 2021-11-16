@@ -26,8 +26,9 @@ function login() {
       }
     }
 
-    if (userLogado) alert("bem vindo " + user.nome);
-    else alert("Usuário e senha incorretos");
-    return user.nome;
+    if (userLogado) {
+      location.href = "..." 
+    }
+      else alert("Usuário e senha incorretos");
   };
 }
