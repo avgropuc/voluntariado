@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../imagens/favicon.ico"
+      type="image/x-icon"
+    />
     <title>VOLUNTARIANDO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,128 +17,191 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../estilos/cadastroEntidade.css" />
+    <script
+      type="text/javascript"
+      src="../scripts/cadastroEntidade.js"
+    ></script>
   </head>
+
   <body>
     <header>
       <nav>
         <a href="../index.html"><img src="../imagens/logo.png" alt="logo" /></a>
-          <ul class="nav-list">
-            <li><a href="../paginas/cadastroVoluntario.html">Quero ser voluntário</a></li>
-            <li><a href="../paginas/cadastroEntidade.html">Busco por voluntários</a></li>
-            <li><a href="../paginas/login.html">Entrar</a></li>
+        <ul class="nav-list">
+          <li>
+            <a href="../paginas/cadastroVoluntario.html"
+              >Quero ser voluntário</a
+            >
+          </li>
+          <li>
+            <a href="../paginas/buscoporvoluntarios.html"
+              >Busco por voluntários</a
+            >
+          </li>
+          <li><a href="../paginas/login.html">Entrar</a></li>
         </ul>
       </nav>
     </header>
-     <main>
-   
-      <section id="campo1">
-        <div id="title">
+    <main>
+      <form name="formUser" method="get" action=".">
+        <section id="campo1">
+          <div id="title">
             <h1>Cadastro da instutuição</h1>
             <p>Preencha os campos abaixo:</p>
-        </div>
-        <form>
-            <fieldset id="inst">
-              <legend>Instituição</legend>
-                  <div>
-                      <label for="razao">Razão social: </label>
-                      <input type="text" name="razao" id="razao" required>
-                   </div>
-                   <div>
-                      <label for="cnpj">CNPJ: </label>
-                      <input type="number" name="cnpj" id="cnpj" required>
-                   </div>
-            </fieldset>
-            <fieldset id="log">
-              <legend>Login</legend>
-                  <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required>
-                  </div>
-                  <div>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" required>
-                  </div>
-            </fieldset>
-            <fieldset id="cont">
-              <legend>Contato</legend>
-              <div>
-               <label for="tel">Telefone: </label>
-               <input type="number" name="tel" id="tel" required>
-              </div>
-              <div>
-                <label for="site">Site: </label>
-                <input type="text" name="site" id="site">
-               </div>
-            </fieldset>
-          </section>
-          
+          </div>
 
-          
-            <fieldset id="campo2">
-              <legend>Endereço</legend>
-              <div>
-                  <label for="rua">Logradouro: </label>
-                  <input type="text" name="rua" id="rua">
-               </div>
-               <div>
-                <label for="bairro">Bairro: </label>
-                <input type="text" name="bairro" id="bairro">
-             </div>
-             <div>
-              <label for="cep">CEP: </label>
-              <input type="number" name="cep" id="cep">
-           </div>
-               <div>
-                  <label for="num">Número: </label>
-                  <input type="number" name="num" id="num">
-               </div>
-               <div>
-                <label for="comp">Complemento: </label>
-                <input type="text" name="comp" id="comp">
-             </div>
-               <div>
-                <label for="text">Cidade: </label>
-                <input type="text" name="cidade" id="cidade" required>
-             </div>
-             
-               <div>
-                <label for="estado">Estado:
-                  <select id="estado" required>
-                    <option selected disabled value="">Selecione</option>
-                    <option>Acre</option>
-                    <option>Alagoas</option>
-                    <option>Amapá</option>
-                    <option>Amazonas</option>
-                    <option>Bahia</option>
-                    <option>Ceará</option>
-                    <option>Distrito Federal</option>
-                    <option>Espírito Santo</option>
-                    <option>Goiás</option>
-                    <option>Maranhão</option>
-                    <option>Mato Grosso</option>
-                    <option>Mato Grosso do Sul</option>
-                    <option>Minas Gerais</option>
-                    <option>Pará</option>
-                    <option>Paraíba</option>
-                    <option>Paraná</option>
-                    <option>Pernambuco</option>
-                    <option>Piauí</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Rio Grande do Norte</option>
-                    <option>Rio Grande do Sul</option>
-                    <option>Rondônia</option>
-                    <option>Roraima</option>
-                    <option>Santa Catarina</option>
-                    <option>São Paulo</option>
-                    <option>Sergipe</option>
-                    <option>Tocatins</option>
-                  </select>
-                </label>
-              </div>
-        </fieldset> 
-        <button class="botao" type="submit">Enviar</button>
-        </form>
-      </main>
+          <fieldset id="inst">
+            <legend>Instituição</legend>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="razao"
+                id="razao"
+                class="inputUser"
+                onblur="razaoblur()"
+                required
+              />
+              <label for="razao" class="labelInput">Razão social* </label>
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="cnpj"
+                id="cnpj"
+                class="inputUser"
+                onblur="CNPJblur()"
+                required
+              />
+              <label for="cnpj" class="labelInput">CNPJ* </label>
+            </div>
+          </fieldset>
+
+          <fieldset id="log">
+            <legend>Login</legend>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="email"
+                id="logemail"
+                class="inputUser"
+                onblur="EMAILblur()"
+                required
+              />
+              <label for="logemail" class="labelInput">E-mail*</label>
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="password"
+                name="senha"
+                id="senha"
+                class="inputUser"
+                required
+              />
+              <label for="senha" class="labelInput">Senha*</label>
+            </div>
+          </fieldset>
+
+          <fieldset id="cont">
+            <legend>Contato</legend>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="tel"
+                id="tel"
+                class="inputUser"
+                maxlength="15"
+                required
+              />
+              <label for="tel" class="labelInput">Telefone* </label>
+            </div>
+
+            <div class="inputBox">
+              <input type="text" name="site" id="site" class="inputUser" />
+              <label for="site" class="labelInput">Site </label>
+            </div>
+          </fieldset>
+        </section>
+        <section id="campo2">
+          <fieldset id="endereco">
+            <legend>Endereço</legend>
+
+            <div class="inputBox">
+              <input
+                name="cep"
+                type="text"
+                id="cep"
+                class="inputUser"
+                value=""
+                size="10"
+                maxlength="9"
+                onblur="pesquisacep(this.value);"
+              />
+              <label for="cep" class="labelInput">CEP* </label>
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="rua"
+                id="rua"
+                class="inputUser"
+                size="60"
+              />
+              <label for="rua" class="labelInput">Logradouro </label>
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="bairro"
+                id="bairro"
+                class="inputUser"
+                size="40"
+              />
+              <label for="bairro" class="labelInput">Bairro </label>
+            </div>
+
+            <div class="inputBox">
+              <input type="number" name="num" id="num" class="inputUser" />
+              <label for="num" class="labelInput">Número </label>
+            </div>
+
+            <div class="inputBox">
+              <input type="text" name="comp" id="comp" class="inputUser" />
+              <label for="comp" class="labelInput">Complemento </label>
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                class="inputUser"
+                size="40"
+              />
+              <label for="text" class="labelInput">Cidade* </label>
+            </div>
+
+            <div class="inputBox">
+              <input name="uf" type="text" id="uf" class="inputUser" size="2" />
+              <label for="estado" class="labelInput">Estado* </label>
+            </div>
+          </fieldset>
+
+          <div class="botao">
+            <button id="lim" type="reset">Limpar</button>
+            <button id="env" type="submit" onclick="return validar ()">
+              Enviar
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
 
     <footer id="rodape">&copy 2021 Voluntariando</footer>
   </body>

@@ -1,31 +1,38 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*Passa a considerar toda a caixa como conteúdo (widht= conteúdo + border + padding)*/
+  box-sizing: border-box; /*Passa a considerar toda a caixa como conteÃºdo (widht= conteÃºdo + border + padding)*/
   font-family: "Poppins", sans-serif;
 }
 
 main {
+  height: auto;
+  margin: 20px 0px 20px 0px;
+  width: 100%;
   display: flex;
-  background-color: rgba(255, 166, 0, 0.774);
+  flex-direction: row;
+  justify-content: center; /* alinhados em Ãºnica coluna,no centro (para direita)*/
+  align-items: center; /*fazer apÃ³s row: Alinha vertical (para baixo)  */
+  color: #434343;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 166, 0, 0.8);
   box-shadow: 3px 3px 1px 0px #00000060;
   border-radius: 10px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 20%;
   height: auto;
-  width: 60%;
-  padding: 20px;
-  justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
-  align-items: center; /*fazer após row: Alinha vertical (para baixo)  */
-  color: #434343;
+  width: 60vw;
+  padding: 0px;
 }
 
 #inst,
 #cont,
 #log,
-#campo2 {
+#endereco {
   color: white;
+  width: 100%;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
@@ -35,40 +42,130 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 35px;
-  width: 50%;
+  line-height: 45px;
+  width: 60%;
+  height: auto;
   padding: 20px;
+  margin: 0px 15px 0px 40px;
   color: white;
   text-align: justify;
-  border: 0px solid black;
   border-radius: 5px;
   text-align: left;
+  text-shadow: 1px 1px 2px black;
 }
 
 #campo2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 35px;
-  width: 50%;
+  line-height: 45px;
+  height: auto;
+  width: 60%;
+  margin: 70px 50px 15px -40px;
   padding: 20px;
   color: white;
   text-align: justify;
   border-radius: 5px;
   text-align: left;
+  text-shadow: 1px 1px 2px black;
 }
 
+.botao {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  margin-top: 10px;
+}
+
+#env {
+  display: flex;
+  width: 30%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 100px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: #08558b;
+  cursor: pointer;
+}
+#lim {
+  display: flex;
+  width: 30%;
+  padding: 10px;
+  justify-content: center;
+  color: white;
+  border-radius: 100px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#lim:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+  color: black;
+}
+#env:hover {
+  background-color: rgb(132, 255, 163);
+  transition: 0.4s;
+  color: black;
+}
+
+legend {
+  font-size: 18px;
+}
+
+.labelInput {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.5px;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+  top: -20px;
+  font-size: 12px;
+  color: #f1f1f1;
+  letter-spacing: 0.1em;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputUser {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
 a {
   color: black;
   text-decoration: none;
   transition: 0.3s;
-}
+} /*
 .botao {
-  display: block;
+  display: flex;
   align-items: center;
+  flex-direction: row;
   background-color: transparent;
   border-color: #f1f1f1;
-  color: #f1f1f1;
+  color: #ff0000;
   padding: 5px;
   font-weight: bold;
   font-size: 16pt;
@@ -78,11 +175,10 @@ a {
   margin-top: auto;
 }
 
-botao:hover {
-  background-color: #f1f1f1;
-  color: orange;
-  transition: all 0.4s ease-out;
-}
+.botao:hover {
+  background-color: #1b223c;
+  transition: 0.4s;
+}*/
 a:hover {
   opacity: 0.7;
 }
@@ -126,26 +222,30 @@ nav {
 }
 
 @media (max-width: 999px) {
-  .nav-list {
-    position: absolute;
-    top: 20vh;
-    right: 0;
-    width: 100vw;
-    height: 15vh;
-    background: rgba(255, 166, 0, 0.774);
+  main {
+    height: auto;
+    width: auto;
+  }
+  nav {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background-color: rgba(255, 166, 0, 0.774);
+    height: auto;
   }
-  main {
+  .nav-list {
+    display: block;
+    text-align: center;
+  }
+  form {
     padding: 10px;
     display: flex;
-    margin-left: 0;
-    margin-top: 125px;
-    width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 80vw;
   }
 
   #campo1 {
@@ -153,25 +253,28 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin: 0;
   }
   #campo2 {
     display: flex;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
-  }
+    margin: 0;
+  } /*
   .botao {
-    width: auto;
     display: flex;
-    margin-top: 0;
-  }
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }*/
 
   .nav-list li {
     margin-left: 0;
     opacity: 50;
   }
   @media screen and (max-width: 930px) {
-    /*breakpoint cards*/
     main {
       height: auto;
       width: auto;
