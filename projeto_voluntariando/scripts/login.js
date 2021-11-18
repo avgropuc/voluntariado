@@ -27,8 +27,7 @@ function login() {
     }
 
     if (userLogado) {
-      location.href = "..." 
-    }
-      else alert("Usuário e senha incorretos");
+      location.href = "../paginas/telaPerfilVoluntario.html";
+    } else alert("Usuário e senha incorretos");
   };
 }

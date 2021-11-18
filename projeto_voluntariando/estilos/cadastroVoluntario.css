@@ -13,7 +13,8 @@ main {
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 20%;
-  height: auto;
+  height: 100%;
+
   width: 65%;
   padding: 20px;
   justify-content: center; /* alinhados em única coluna,no centro (para direita)*/
@@ -23,7 +24,6 @@ main {
 
 #dados,
 #campo2 {
-  
   padding: 10px;
   border: 1px solid white;
   border-radius: 5px;
@@ -41,8 +41,6 @@ main {
   border: 0px solid white;
   border-radius: 5px;
   text-align: left;
-  
-  
 }
 
 #campo2 {
@@ -57,20 +55,18 @@ main {
   border-radius: 5px;
   text-align: left;
   margin-right: 5px;
-  
 }
 
-label{
-  font-size:0.95em;
+label {
+  font-size: 0.95em;
 }
 
-input,select{
+input,
+select {
   background: none;
   border: none;
   border-bottom: 1px solid #f1f1f1;
   outline: none;
-  
-
 }
 
 a {
@@ -78,7 +74,6 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
-
 
 button[type="button"] {
   display: block;
@@ -99,8 +94,6 @@ button[type="button"]:hover {
   background-color: #1b223c;
   transition: 0.4s;
 }
-
-
 
 a:hover {
   opacity: 0.7;
