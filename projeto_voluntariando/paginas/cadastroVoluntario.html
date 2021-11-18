@@ -53,7 +53,7 @@
 
                         <div>
                         <label for="cpf" class="labelInput">CPF *</label>
-                        <input type="text"  name="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"\
+                        <input type="text"  name="cpf" id="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"\
 			             class="inputUser"  required> 
                         </div> 
                     
@@ -62,7 +62,7 @@
                         <input type="text" class="inputUser" id="phone" name="phone"   required>
                         </div> <br>
 
-                        <div>
+                        <div class="checkbox">
                         <label for="maior">Maior de idade? *</label>
                         <input type="radio" name="maior"  id="maior" value="maior" required>
                         </div>
@@ -141,7 +141,7 @@
                     </div> 
                     <br>
                         
-                    <div>
+                    <div class="checkbox">
                     <p>Frequência:</p>
                     <input type="radio"  id="semana" name="frequencia"  value="semana" required>
                     <label for="semana">Durante a semana</label> <br>
@@ -153,7 +153,7 @@
 
                     
                  </fieldset> 
-                 <input type="submit" name="submit" id="submit" onclick="return validar ()"></imput>
+                 <button type="button"  onclick="cadastraUsuario()" ondblclick="validar()">Enviar</button>
             </form>
         
         </main>
