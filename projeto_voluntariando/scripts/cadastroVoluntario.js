@@ -40,7 +40,7 @@ function validar(){
         return false;
     }
 
-    if(estado.value == "" ){
+    if(estado.value == "" ){ 
         alert ('Selecione uma opção de Estado para continuar');
         return false;
     }
