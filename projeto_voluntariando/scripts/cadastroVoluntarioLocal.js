@@ -1,7 +1,7 @@
 function cadastraVoluntario() {
     var nome = document.getElementById("nome");
     var cpf = document.getElementById("cpf");
-    var email = document.getElementById("logmail");
+    var logemail = document.getElementById("logemail");
     var senha = document.getElementById("senha");
     var tel = document.getElementById("tel");
     var cep = document.getElementById("cep");
@@ -33,6 +33,8 @@ function cadastraVoluntario() {
     localStorage.setItem("dadosCadastro", JSON.stringify(dados));
     alert("Registro incluído com sucesso!");
     
+   window.location.href = "../paginas/login.html";
+      
     
   
       nome.value = "";
