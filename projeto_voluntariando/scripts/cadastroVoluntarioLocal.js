@@ -1,7 +1,11 @@
 function cadastraVoluntario() {
     var nome = document.getElementById("nome");
     var cpf = document.getElementById("cpf");
+<<<<<<< HEAD
     var logemail = document.getElementById("logemail");
+=======
+    var email = document.getElementById("logmail");
+>>>>>>> parent of 46d663e... Inserção de tela de perfil do voluntário
     var senha = document.getElementById("senha");
     var tel = document.getElementById("tel");
     var cep = document.getElementById("cep");
@@ -33,8 +37,11 @@ function cadastraVoluntario() {
     localStorage.setItem("dadosCadastro", JSON.stringify(dados));
     alert("Registro incluído com sucesso!");
     
+<<<<<<< HEAD
    window.location.href = "../paginas/login.html";
       
+=======
+>>>>>>> parent of 46d663e... Inserção de tela de perfil do voluntário
     
   
       nome.value = "";
