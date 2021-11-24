@@ -47,23 +47,33 @@ li {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  overflow-y: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
-.card_resultado {
+.card_Volunteer {
   border: 1px solid #bfbfbf;
   background-color: white;
   box-shadow: 0 5px 15px #ccc;
   margin: 10px 15px;
   padding: 16px;
+  min-width: 220px;
+  min-height: 320px;
 }
 
-.card_resultado img {
+.card_Volunteer img {
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
 
-.card_resultado li {
+.card_Volunteer li {
   margin-top: 5px;
+}
+
+.liVazio {
+  font-size: large;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
