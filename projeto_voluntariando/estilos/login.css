@@ -120,6 +120,15 @@ input[type="button"]:hover {
   margin-bottom: 10px;
 }
 
+#msgErro {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
 @media (max-width: 999px) {
   #login-container {
     display: block;

@@ -48,27 +48,28 @@
     <main>
       <div id="login-container">
         <h1>Login</h1>
+        <div id="msgErro"></div>
         <form action="" method="post">
-          <label for="email">E-mail</label>
+          <label for="email" id="emailLabel">E-mail</label>
           <input
             type="email"
             name="email"
-            id="email-usuario"
+            id="emailUsuario"
             placeholder="Digite seu e-mail"
             autocomplete="off"
             required
           />
-          <label for="password">Senha</label>
+          <label for="password" id="senhaLabel">Senha</label>
           <input
             type="password"
-            name="senha-usuario"
-            id="senha-usuario"
+            name="senhaUsuario"
+            id="senhaUsuario"
             placeholder="Digite sua senha"
             required
           />
           <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
           <!--<a href="#" id="esqueceu-senha">Esqueceu a Senha?</a>-->
-          <input type="button" value="Login" onclick="login()" />
+          <input type="button" value="Login" onclick="logar()" />
         </form>
         <!--<div id="rede-social">
           <p>Entre pelas suas redes sociais</p>
@@ -78,7 +79,7 @@
         </div>-->
       </div>
       <script src="../scripts/verSenha.js"></script>
-      <script src="../scripts/login.js"></script>
+      <script src="../scripts/loginPadrao.js"></script>
     </main>
 
     <footer id="rodape">&copy 2021 Voluntariando</footer>
