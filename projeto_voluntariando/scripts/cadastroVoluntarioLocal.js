@@ -56,7 +56,8 @@ function cadastraVoluntario() {
   alert("Registro incluído com sucesso!");
 
   //HEAD
-  window.location.href = "../paginas/login.html";
+  window.location.href =
+    "http://127.0.0.1:5500/projeto_voluntariando/paginas/login.html";
 
   //Inserção de tela de perfil do voluntário
 

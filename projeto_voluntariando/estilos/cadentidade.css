@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /*Passa a considerar toda a caixa como conteúdo (widht= conteúdo + border + padding)*/
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
-  height: auto; 
+  height: auto;
   margin: 20px 0px 20px 0px;
   width: 100%;
   display: flex;
@@ -95,7 +95,6 @@ form {
   outline: none;
   background-color: #08558b;
   cursor: pointer;
-
 }
 #lim {
   display: flex;
@@ -106,10 +105,9 @@ form {
   border-radius: 100px;
   font-weight: bold;
   border: none;
-  outline:none;
+  outline: none;
   background-color: black;
   cursor: pointer;
-
 }
 
 #lim:hover {
