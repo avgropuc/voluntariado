@@ -1,4 +1,4 @@
-function login() {
+/*function login() {
   //pegas os valores inseridos nos campos
   var email = document.getElementById("email-usuario").value;
   var senha = document.getElementById("senha-usuario").value;
@@ -30,4 +30,4 @@ function login() {
       location.href = "../paginas/telaPerfilVoluntario.html";
     } else alert("Usuário e senha incorretos");
   };
-}
+}*/

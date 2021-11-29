@@ -13,18 +13,18 @@ function cadastraEntidade() {
     var cid = document.getElementById("cidade");
     var Est = document.getElementById("uf");*/
 
-  var dados = JSON.parse(localStorage.getItem("dadosCadastro"));
+  var dados = JSON.parse(localStorage.getItem("dadosCadEnt"));
 
   if (dados == null) {
-    localStorage.setItem("dadosCadastro", "[]");
+    localStorage.setItem("dadosCadEnt", "[]");
     dados = [];
   }
 
   var auxRegistro = {
     Razao: razao.value,
     Cnpj: cnpj.value,
-    Email: logemail.value,
-    Sen: senha.value,
+    emailEnt: logemail.value,
+    senhaEnt: senha.value,
     Tel: tel.value,
     Pag: site.value,
     Cep: cep.value,
@@ -39,7 +39,7 @@ function cadastraEntidade() {
 
   dados.push(auxRegistro);
 
-  localStorage.setItem("dadosCadastro", JSON.stringify(dados));
+  localStorage.setItem("dadosCadEnt", JSON.stringify(dados));
   alert("Registro incluído com sucesso!");
 
   razao.value = "";

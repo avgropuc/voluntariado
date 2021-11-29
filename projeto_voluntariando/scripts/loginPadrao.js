@@ -9,7 +9,11 @@ function logar() {
     emailLog: "",
     senhaLog: "",
   };
-  dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro"));
+  let entValid = {
+    emailLogEnt: "",
+    senhaLogEnt: "",
+  };
+  /* dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro"));
 
   dadosCadastro.forEach((item) => {
     if (emailUsuario.value == item.email && senhaUsuario.value == item.senha) {
@@ -34,7 +38,7 @@ function logar() {
     msgErro.setAttribute("style", "display:block");
     msgErro.innerHTML = "Email ou senha incorretos!";
     emailUsuario.focus();
-  }
+  }*/
 
   cadUsuarioPadrao = JSON.parse(localStorage.getItem("cadUsuarioPadrao"));
 
@@ -63,22 +67,23 @@ function logar() {
     emailUsuario.focus();
   }
 
-  dadosCadastroEmpresa = JSON.parse(
-    localStorage.getItem("dadosCadastroEmpresa")
-  );
+  dadosCadastroEmpresa = JSON.parse(localStorage.getItem("dadosCadEnt"));
 
   dadosCadastroEmpresa.forEach((item) => {
-    if (emailUsuario.value == item.email && senhaUsuario.value == item.senha) {
-      userValid = {
-        emailLog: item.email,
-        senhaLog: item.senha,
+    if (
+      emailUsuario.value == item.emailEnt &&
+      senhaUsuario.value == item.senhaEnt
+    ) {
+      entValid = {
+        emailLogEnt: item.emailEnt,
+        senhaLogEnt: item.senhaEnt,
       };
     }
   });
 
   if (
-    emailUsuario.value == userValid.emailLog &&
-    senhaUsuario.value == userValid.senhaLog
+    emailUsuario.value == entValid.emailLogEnt &&
+    senhaUsuario.value == entValid.senhaLogEnt
   ) {
     window.location.href =
       "http://127.0.0.1:5500/projeto_voluntariando/paginas/telaPerfilEntidade.html";
@@ -92,33 +97,3 @@ function logar() {
     emailUsuario.focus();
   }
 }
-
-/* let email = document.getElementById("email");
-  let senha = document.getElementById("senha");
-
-  let dadosCadastro = [];
-
-  let userValid = {
-    email: "",
-    senha: "",
-  };
-
-  dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro"));
-
-  dadosCadastro.forEach((item) => {
-    if (email.value == item.email && senha.value == item.senha) {
-      userValid = {
-        email: item.email,
-        senha: item.senha,
-      };
-    }
-  });
-
-  if (email.value == userValid.email && senha.value == userValid.senha) {
-    alert("Login Efetuado com Sucesso!");
-
-    window.location.href = "../paginas/telaPerfilVoluntario.html";
-  } else {
-    alert("Erro");
-  }
-}*/
