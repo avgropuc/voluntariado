@@ -160,7 +160,7 @@ function id( el ){
 	return document.getElementById( el );
 }
 window.onload = function(){
-	('tel').onkeyup = function(){
+	id('tel').onkeyup = function(){
 		mascara( this, mtel );
 	}
 }
