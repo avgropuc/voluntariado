@@ -13,7 +13,20 @@ function logar() {
     emailLogEnt: "",
     senhaLogEnt: "",
   };
-  /* dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro"));
+  if (emailUsuario.value == "" || senhaUsuario.value == "") {
+    sessionStorage.setItem("entidadeLogado", null);
+    sessionStorage.setItem("usuarioLogado", null);
+    emailLabel.setAttribute("style", "color:red");
+    emailUsuario.setAttribute("style", "boder-color:red");
+    senhaLabel.setAttribute("style", "color:red");
+    senhaUsuario.setAttribute("style", "border-color:red");
+    msgErro.setAttribute("style", "display:block");
+    msgErro.innerHTML = "Email ou senha incorretos!";
+    emailUsuario.focus();
+    return;
+  }
+
+  dadosCadastro = JSON.parse(localStorage.getItem("dadosCadastro"));
 
   dadosCadastro.forEach((item) => {
     if (emailUsuario.value == item.email && senhaUsuario.value == item.senha) {
@@ -21,6 +34,7 @@ function logar() {
         emailLog: item.email,
         senhaLog: item.senha,
       };
+      sessionStorage.setItem("usuarioLogado", userValid);
     }
   });
 
@@ -38,7 +52,7 @@ function logar() {
     msgErro.setAttribute("style", "display:block");
     msgErro.innerHTML = "Email ou senha incorretos!";
     emailUsuario.focus();
-  }*/
+  }
 
   cadUsuarioPadrao = JSON.parse(localStorage.getItem("cadUsuarioPadrao"));
 
@@ -48,6 +62,7 @@ function logar() {
         emailLog: item.email,
         senhaLog: item.senha,
       };
+      sessionStorage.setItem("usuarioLogado", userValid);
     }
   });
 
@@ -78,6 +93,7 @@ function logar() {
         emailLogEnt: item.emailEnt,
         senhaLogEnt: item.senhaEnt,
       };
+      sessionStorage.setItem("entidadeLogado", entValid);
     }
   });
 
