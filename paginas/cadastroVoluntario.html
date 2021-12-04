@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon" />
+  <title>VOLUNTARIANDO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../estilos/cadastroVoluntario.css" />
+  <script type="text/javascript" src="../scripts/cadastroVoluntario.js"></script>
+  <script type="text/javascript" src="../scripts/cadastroVoluntarioLocal.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html"><img src="../imagens/logo.png" alt="logo" /></a>
+      <ul class="nav-list">
+        <li><a href="../paginas/cadastroVoluntario.html">Quero ser voluntário</a></li>
+        <li><a href="../paginas/cadastroEntidade.html">Busco por voluntários</a></li>
+        <li><a href="../paginas/login.html">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <form name="formUser" method="get" action=".">
+      <section id="campo1">
+        <div id="title">
+          <h1>Cadastro do Voluntário</h1>
+          <p>Preencha os campos abaixo:</p>
+        </div>
+     
+        <fieldset id="inst">
+          <legend>Dados Pessoais</legend>
+
+          <div class="inputBox">
+            <input type="text" name="nome" id="nome" class="inputUser" onblur="nomeblur()">
+            <label for="nome" class="labelInput">Nome* </label>
+          </div> 
+
+          <div class="inputBox">
+            <input type="text" name="cpf" id="cpf" class="inputUser" onblur="cpfblur()" >
+            <label for="cpf"class="labelInput">CPF* </label>
+          </div>
+
+          <div class="checkbox">
+            <label for="maior">Maior de idade? *</label>
+            <input type="radio" name="maior"  id="maior" value="maior" required>
+            </div>
+        
+        </fieldset>
+
+        <fieldset id="log">
+          <legend>Login</legend>
+
+          <div class="inputBox">
+            <input type="text" name="email" id="logemail" class="inputUser" onblur="EMAILblur()" >
+            <label for="logemail" class="labelInput">E-mail*</label>
+          </div>
+
+          <div class="inputBox">
+            <input type="password" name="senha" id="senha" class="inputUser" >
+            <label for="senha" class="labelInput">Senha*</label>
+          </div>
+
+        </fieldset>
+        
+        <fieldset id="cont">
+          <legend>Contato</legend>
+
+          <div class="inputBox">
+            <input type="text" name="tel" id="tel" class="inputUser" maxlength="15" >
+            <label for="tel" class="labelInput">Telefone* </label>
+          </div>
+
+        </fieldset>
+
+        </section>
+        <section id="campo2">
+
+      <fieldset id="endereco">
+        <legend>Endereço</legend>
+
+        <div class="inputBox">
+          <input name="cep" type="text" id="cep" class="inputUser" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);">
+          <label for="cep" class="labelInput">CEP* </label>
+        </div>
+
+
+        <div class="inputBox">
+          <input type="text" name="bairro" id="bairro" class="inputUser" size="40">
+          <label for="bairro" class="labelInput">Bairro </label>
+        </div>
+
+       
+        <div class="inputBox">
+          <input type="text" name="cidade" id="cidade" class="inputUser" size="40">
+          <label for="text" class="labelInput">Cidade* </label>
+        </div>
+
+        <div class="inputBox">
+        <input name="uf" type="text" id="uf" class="inputUser" size="2" />
+        <label for="uf" class="labelInput">Estado* </label>
+      </div> 
+      </fieldset>
+
+
+      <fieldset id="disponibilidade">
+        <legend>Disponibilidade</legend>
+        <div>
+          <label for="habilidade" class= "disp" >Habilidade *</label>
+          <select name="habilidade" id="habilidade" class="inputUser" required>  
+              <option value=""></option> 
+              <option value="manuais">Trabalhos manuais</option>
+              <option value="particular">Aula particular</option>
+              <option value="transporte">Transporte</option>
+              <option value="consertos">Consertos</option>
+          </select>
+          
+      </div> 
+
+      <div class="checkbox">
+        <p>Frequência:</p>
+        <input type="radio"  id="semana" name="frequencia"  value="semana" required>
+        <label for="semana" class= "disp">Durante a semana</label> <br>
+        <input type="radio" id="fds" name="frequencia"   value="fds" required>
+        <label for="fds" class= "disp">Aos fins de semana</label> <br>
+        <input type="radio"  id="todos" name="frequencia"   value="todos" required>
+        <label for="todos" class= "disp">Todos os dias</label> 
+        </div>
+      </fieldset>
+
+    <div class="botao">
+    <button id="lim" type="reset">Limpar</button>
+    <button id="env" type="submit" onclick= " return validar ()">Enviar </button>
+  </div>
+
+  </section>
+  </form>
+</main>
+
+  <footer id="rodape">&copy 2021 Voluntariando</footer>
+
+</body>
+</html>
+
+
+  

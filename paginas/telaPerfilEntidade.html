@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../imagens/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>VOLUNTARIANDO</title>
+    <link rel="stylesheet" href="../estilos/style.css" />
+    <link rel="stylesheet" href="../estilos/perfilEntidade.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="../scripts/perfilEntidade.js"></script>
+    <script src="../scripts/ibge.js"></script>
+  </head>
+  <body onload="load()">
+    <header>
+      <nav>
+        <a href="../index.html"><img src="../imagens/logo.png" alt="logo" /></a>
+
+        <ul class="nav-list">
+          <li>
+            <a href="../paginas/queroservoluntario.html"
+              >Quero ser voluntário</a
+            >
+          </li>
+          <li>
+            <a href="../paginas/buscoporvoluntarios.html"
+              >Busco por voluntários</a
+            >
+          </li>
+          <li><a href="../paginas/login.html">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="title">Filtros</div>
+
+      <div id="filtro_voluntarios">
+        <div class="select_personalizado">
+          Estado
+          <select id="selEst" name="Estado" onchange="filter('selEst')">
+            <option value="null">Select</option>
+          </select>
+        </div>
+
+        <div class="select_personalizado">
+          Cidade
+          <select
+            id="selCid"
+            name="Cidade"
+            onchange="filter('selCid')"
+            disabled
+          >
+            <option value="null">Select</option>
+          </select>
+        </div>
+
+        <div class="select_personalizado">
+          Região
+          <select
+            id="selReg"
+            name="Regiao"
+            onchange="filter('selReg')"
+            disabled
+          >
+            <option value="null">Select</option>
+            <option value="Centro">Centro</option>
+            <option value="Leste">Leste</option>
+            <option value="Norte">Norte</option>
+            <option value="Oeste">Oeste</option>
+            <option value="Sul">Sul</option>
+          </select>
+        </div>
+
+        <div class="select_personalizado">
+          Frequencia
+          <select id="selFreq" name="Frequencia" onchange="filter('selFreq')">
+            <option value="null">Select</option>
+            <option value="Todos os dias">Todos os dias</option>
+            <option value="Dias de semana">Dias de semana</option>
+            <option value="Final de semana">Final de semana</option>
+          </select>
+        </div>
+
+        <div class="select_personalizado" onchange="filter('selHab')">
+          Habilidade
+          <select id="selHab" name="Habilidade">
+            <option value="null">Select</option>
+            <option value="Português">Português</option>
+            <option value="Ciências">Ciências</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Comunicação">Comunicação</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="title">Resultados</div>
+
+      <ul id="cards_resultados"></ul>
+    </main>
+
+    <footer id="rodape">&copy 2021 Voluntariando</footer>
+  </body>
+</html>
