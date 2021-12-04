@@ -35,7 +35,7 @@ function cadastraVoluntario() {
 
   // Salva no localstorage
   localStorage.setItem("dadosCadastro", JSON.stringify(dados));
-  alert("Registro incluÃ­do com sucesso!");
+  alert("Registro realizado com sucesso!");
 
   //Limpa os campos
   nome.value = "";
@@ -50,5 +50,5 @@ function cadastraVoluntario() {
 
   //Redireciona para login
   window.location.href =
-    "http://127.0.0.1:5500/projeto_voluntariando/paginas/login.html";
+    "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2021-2-e1-proj-web-t3-voluntariando/projeto_voluntariando/paginas/login.html";
 }
